@@ -1,5 +1,6 @@
-/*Prática.06 Altere o exemplo desta prática, para que ele apresente uma tela semelhante à do
-exemplo abaixo.*/
+/*Prática.06 Altere o exemplo desta prática, para que ele apresente uma tela semelhante à do exemplo abaixo.*/
+
+
 import 'package:flutter/material.dart';
 
 void main() {

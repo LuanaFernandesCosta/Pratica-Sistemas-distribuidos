@@ -1,0 +1,10 @@
+/*Prática.02Altere o exemplo desta prática, para que ele apresente seu nome na tela*/
+import 'package:flutter/material.dart';
+void main() {
+ runApp(
+ Text(
+ 'Luana,Pedro,Barbara,Geisislaine',
+ textDirection: TextDirection.rtl,
+ ), //Text.
+ ); //runApp.
+}

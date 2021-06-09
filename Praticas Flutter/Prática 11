@@ -1,0 +1,120 @@
+/*Usando o framework Flutter, altere o algoritmo para que o usuário possa ver uma tela
+que descreva cada foto do álbum, como apresentado abaixo. Ao clicar numa foto, o
+usuário deve ser direcionado para a tela de descrição. A tela de descrição deve possuir
+um botão para retornar à tela principal.*/
+
+import 'package:flutter/material.dart';
+void main() => runApp(
+      MaterialApp(
+        home: PrimeiraRota(),
+      ),
+    );
+
+class PrimeiraRota extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Album'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: <Widget>[
+            TextButton(
+              child: Image.network(
+                'https://images.pexels.com/photos/213781/pexels-photo-213781.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SegundaRota()),
+                );
+              },
+            ),
+            TextButton(
+              child: Image.network(
+                'https://images.pexels.com/photos/213782/pexels-photo-213782.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SegundaRota()),
+                );
+              },
+            ),
+            TextButton(
+              child: Image.network(
+                'https://images.pexels.com/photos/213783/pexels-photo-213783.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SegundaRota()),
+                );
+              },
+            ),
+            TextButton(
+              child: Image.network(
+                'https://images.pexels.com/photos/213788/pexels-photo-213788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SegundaRota()),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class SegundaRota extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Nova York"),
+        backgroundColor: Colors.green,
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Container(
+              child: Text(
+                'Nova York',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 40,
+                ),
+              ),
+              margin: EdgeInsets.all(80),
+            ),
+            Container(
+              child: Text(
+                'A cidade de Nova Yoork compreende 5 distritos situados no encontro do rio Hudson com Oceano Atlântico. No centro da cidade fica Manhattan, um distrito com alta densidade demográfica que esta entre os principais centros comerciais, financeiros e culturaid do mundo (Wikipedia).',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              margin: EdgeInsets.all(80),
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back),
+              backgroundColor: Colors.green,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

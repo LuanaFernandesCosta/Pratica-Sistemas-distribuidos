@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+import 'Rotas.dart';
+
+void main() => runApp(Rotas());
+
+import 'package:flutter/material.dart';
+import 'telas/PrimeiraTela.dart';
+import 'telas/SegundaTela.dart';
+
+class Rotas extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => PrimeiraTela(null),
+        'seguda': (context) => SegundaTela(null),
+      },
+    );
+  }
+}

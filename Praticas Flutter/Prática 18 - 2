@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+import 'Rotas.dart';
+
+void main() {
+  runApp(Rotas());
+}
+import 'package:flutter/material.dart';
+import 'Telas/PrimeiraTela.dart';
+import 'Telas/RotaGenerica.dart';
+
+class Rotas extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: '/',
+        routes: {
+          '/': (context) => PrimeiraTela(),
+          RotaGenerica.caminhoDaRota: (context) => RotaGenerica()
+        });
+  }
+}
